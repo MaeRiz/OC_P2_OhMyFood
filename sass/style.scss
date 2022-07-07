@@ -108,3 +108,63 @@ body {
     }
 
 }
+
+
+#use {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+
+    h3 {
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .item {
+        display: flex;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        margin: 10px 0 10px 15px;
+        border-radius: 1.1rem;
+        box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.116);
+
+        &__num {
+            color: white;
+            background-color: $clr-primary;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: -13px;
+            border-radius: 100%;
+            text-align: center;
+        }
+
+        &__icon {
+            position: absolute;
+            left: 40px;
+            font-size: 20px;
+            color: #4e4e4e;
+        }
+
+        &__text {
+            font-weight: 700;
+        }
+
+        &:hover {
+            background-color: #9256dc2d;
+            cursor: pointer;
+            .item__icon {
+                color: $clr-primary;
+            }
+        }
+    }
+}
