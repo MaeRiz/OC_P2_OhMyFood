@@ -85,9 +85,11 @@ body {
         position: relative;
         z-index: 1;
         box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.295);
-    
+        transition: box-shadow 250ms;
+
         &:hover {
-            cursor: pointer;   
+            cursor: pointer;
+            box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.295);
             &::after {
                 opacity: 1;
                 
@@ -163,12 +165,16 @@ body {
         }
 
         &:hover {
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.116);
             background-color: #9256dc2d;
             cursor: pointer;
             .item__icon {
                 color: $clr-primary;
             }
         }
+
+        transition: background-color 250ms, box-shadow 250ms;
+
     }
 }
 
@@ -195,6 +201,11 @@ body {
         position: relative;
         box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.116);
         margin-bottom: 20px;
+        transition: box-shadow 250ms;
+
+        &:hover {
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.116);
+        }
 
         img {
             border-radius: 10px 10px 0 0 ;
@@ -223,9 +234,18 @@ body {
             right: 15px;
             bottom: 20px;
 
+        }
+
+        .heart-like {
+            opacity: 0;
+            background: linear-gradient($clr-primary, $clr-secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: opacity 250ms;
             &:hover {
                 cursor: pointer;
-                color: #9356DC;
+                opacity: 1;
             }
         }
 
@@ -244,3 +264,28 @@ body {
     }
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 5%;
+    position: relative;
+
+    h6 {
+        font-family: "Shrikhand", "Roboto", sans-serif;
+        margin: 10px 0 15px 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    a {
+        color: white;
+        margin: 5px 0 5px 30px;
+    }
+
+    i {
+        position: absolute;
+        left: 20px;
+    }
+}
