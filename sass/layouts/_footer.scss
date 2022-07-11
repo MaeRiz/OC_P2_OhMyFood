@@ -1,0 +1,25 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #4e4e4e;
+    color: white;
+    padding: 5%;
+    position: relative;
+
+    h6 {
+        font-family: "Shrikhand", "Roboto", sans-serif;
+        margin: 10px 0 15px 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    a {
+        color: white;
+        margin: 5px 0 5px 30px;
+    }
+
+    i {
+        position: absolute;
+        left: 20px;
+    }
+}
