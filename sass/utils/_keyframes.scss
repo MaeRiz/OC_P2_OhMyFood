@@ -29,3 +29,17 @@
         visibility: hidden;
     }
 }
+
+@keyframes animated-menu {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

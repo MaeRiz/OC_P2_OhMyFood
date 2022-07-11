@@ -13,6 +13,22 @@
         display: flex;
         flex-direction: column;
 
+        &__section {
+            opacity: 0;
+            &--entrees {
+                animation: animated-menu 700ms ease-out forwards;
+                animation-delay: 200ms;
+            }
+            &--plats {
+                animation: animated-menu 700ms ease-out forwards;
+                animation-delay: 1000ms;
+            }
+            &--desserts {
+                animation: animated-menu 700ms ease-out forwards;
+                animation-delay: 1800ms;
+            }
+        }
+
         h3 {
             font-family: "Shrikhand", "Roboto", sans-serif;
             font-size: 28px;

@@ -299,6 +299,21 @@ footer i {
   display: flex;
   flex-direction: column;
 }
+#container .menu__section {
+  opacity: 0;
+}
+#container .menu__section--entrees {
+  animation: animated-menu 700ms ease-out forwards;
+  animation-delay: 200ms;
+}
+#container .menu__section--plats {
+  animation: animated-menu 700ms ease-out forwards;
+  animation-delay: 1000ms;
+}
+#container .menu__section--desserts {
+  animation: animated-menu 700ms ease-out forwards;
+  animation-delay: 1800ms;
+}
 #container .menu h3 {
   font-family: "Shrikhand", "Roboto", sans-serif;
   font-size: 28px;
@@ -436,6 +451,19 @@ footer i {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@keyframes animated-menu {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
