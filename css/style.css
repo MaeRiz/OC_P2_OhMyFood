@@ -47,6 +47,30 @@ body {
   transition: opacity 500ms;
 }
 
+#loader {
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: loader-splash 4s 100ms forwards;
+}
+#loader p {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 45px;
+  margin: 0 0 50px 0;
+}
+#loader i {
+  color: #99E2D0;
+  font-size: 80px;
+  animation: loader-ustensils 4s 100ms ease-in-out forwards;
+}
+
 header {
   font-family: "Shrikhand", "Roboto", sans-serif;
   display: flex;
@@ -180,7 +204,7 @@ footer i {
   background-color: rgba(146, 86, 220, 0.1764705882);
   cursor: pointer;
 }
-.use-item:hover .item__icon {
+.use-item:hover .use-item__icon {
   color: #9356DC;
 }
 
@@ -382,6 +406,37 @@ footer i {
   align-self: center;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+@keyframes loader-ustensils {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100);
+  }
+}
+@keyframes loader-splash {
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
