@@ -62,6 +62,9 @@
     h3 {
         font-size: 26px;
         font-weight: 800;
+        @include desktop-only {
+            align-self: center;
+        }
     }
 
     &__content {
@@ -113,6 +116,11 @@
             color: $clr-primary;
         }
     }
+
+    @include desktop-only {
+        width: 400px;
+        align-self: center;
+    }
 }
 
 #restaurants {
@@ -131,72 +139,85 @@
         font-weight: 800;
     }
 
-    .rest-item {
-        background-color: white;
-        height: 200px;
-        border-radius: 10px;
-        position: relative;
-        box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.116);
-        margin-bottom: 20px;
-        transition: box-shadow 250ms;
+    &__content {
+        @include desktop-only {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
 
+}
+
+.rest-item {
+    background-color: white;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.116);
+    margin-bottom: 20px;
+    transition: box-shadow 250ms;
+
+    &:hover {
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.116);
+    }
+
+    img {
+        border-radius: 10px 10px 0 0 ;
+        object-fit: cover;
+        height: 70%;
+        width: 100%;
+    }
+
+    h5 {
+        margin: 0;
+        font-size: 17px;
+        position: absolute;
+        left: 15px;
+        bottom: 30px;
+    }
+    p {
+        margin: 0;
+        font-size: 15px;
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+    }
+    i {
+        font-size: 20px;
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+
+    }
+
+    .heart-like {
+        opacity: 0;
+        background: linear-gradient($clr-primary, $clr-secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: opacity 250ms;
         &:hover {
-            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.116);
+            cursor: pointer;
+            opacity: 1;
         }
+    }
 
-        img {
-            border-radius: 10px 10px 0 0 ;
-            object-fit: cover;
-            height: 70%;
-            width: 100%;
-        }
+    &__new {
+        color: rgb(1, 114, 71);
+        background-color: rgb(125, 216, 181);
+        text-align: center;
+        width: 80px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        line-height: 30px;
+    }
 
-        h5 {
-            margin: 0;
-            font-size: 17px;
-            position: absolute;
-            left: 15px;
-            bottom: 30px;
-        }
-        p {
-            margin: 0;
-            font-size: 15px;
-            position: absolute;
-            left: 15px;
-            bottom: 10px;
-        }
-        i {
-            font-size: 20px;
-            position: absolute;
-            right: 15px;
-            bottom: 20px;
-
-        }
-
-        .heart-like {
-            opacity: 0;
-            background: linear-gradient($clr-primary, $clr-secondary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: opacity 250ms;
-            &:hover {
-                cursor: pointer;
-                opacity: 1;
-            }
-        }
-
-        &__new {
-            color: rgb(1, 114, 71);
-            background-color: rgb(125, 216, 181);
-            text-align: center;
-            width: 80px;
-            height: 30px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            border-radius: 3px;
-            line-height: 30px;
-        }
+    @include desktop-only {
+        width: 400px;
     }
 }

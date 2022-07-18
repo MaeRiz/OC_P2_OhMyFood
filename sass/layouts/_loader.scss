@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: loader-splash 4s 100ms forwards;
+    animation: loader-splash 3s 100ms forwards;
     
     p {
         font-family: "Shrikhand", sans-serif;
@@ -20,6 +20,6 @@
     i{
         color: $clr-tertiary;
         font-size: 80px;
-        animation: loader-ustensils 4s 100ms ease-in-out forwards;
+        animation: loader-ustensils 3s 100ms ease-in-out forwards;
     }
 }
