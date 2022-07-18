@@ -215,6 +215,8 @@
         right: 10px;
         border-radius: 3px;
         line-height: 30px;
+
+        animation: shake 800ms 1000ms infinite;
     }
 
     @include desktop-only {
