@@ -51,6 +51,9 @@
         @extend %animated-btn;
     }
 
+    @include desktop-only {
+        padding: 4%;
+    }
 }
 
 
@@ -71,6 +74,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    @include desktop-only {
+        padding: 0;
     }
 }
 .use-item {

@@ -224,6 +224,11 @@ footer i {
 #explore__btn {
   margin-top: 30px;
 }
+@media screen and (min-width: 940px) {
+  #explore {
+    padding: 4%;
+  }
+}
 
 #use {
   display: flex;
@@ -243,6 +248,11 @@ footer i {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (min-width: 940px) {
+  #use {
+    padding: 0;
+  }
 }
 
 .use-item {
